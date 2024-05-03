@@ -1,5 +1,7 @@
 CC = clang
 CFLAGS = -std=c2x -g
 
-lisp: lvalue.o lexer.o parser.o rt.o
+SRCS=
+
+lisp: $(SRCS:%.c=%.o)
 	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS)
